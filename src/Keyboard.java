@@ -57,6 +57,7 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
 
         //音符の作成
         String mode = "Triangle";
+        //String mode = "Pulse_20";
         double a_frq = 440.0;
         double n = 2.0;
         Note C4 = new Note(VK_A,a_frq,20,44100,mode);
