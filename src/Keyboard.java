@@ -56,16 +56,16 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         addKeyListener(this);
 
         //音符の作成
-        String mode = "Square";
+        String mode = "Triangle";
         double a_frq = 440.0;
-        Note C4 = new Note(VK_A,a_frq,20,44100,mode);
-        Note D4 = new Note(VK_S,a_frq*2,20,44100,mode);
-        Note E4 = new Note(VK_D,a_frq*2*2,20,44100,mode);
-        Note F4 = new Note(VK_F,a_frq*2*2*2,20,44100,mode);
-        Note G4 = new Note(VK_J,a_frq*2*2*2*2,20,44100,mode);
-        Note A4 = new Note(VK_K,a_frq*2*2*2*2*2,20,44100,mode);
-        Note B4 = new Note(VK_L,a_frq*2*2*2*2*2*2,20,44100,mode);
-        Note C5 = new Note(59,a_frq*2*2*2*2*2*2*2,20,44100,mode);
+        Note C4 = new Note(VK_A,269.292,20,44100,mode);
+        Note D4 = new Note(VK_S,302.270,20,44100,mode);
+        Note E4 = new Note(VK_D,339.286,20,44100,mode);
+        Note F4 = new Note(VK_F,359.461,20,44100,mode);
+        Note G4 = new Note(VK_J,403.482,20,44100,mode);
+        Note A4 = new Note(VK_K,452.893,20,44100,mode);
+        Note B4 = new Note(VK_L,508.355,20,44100,mode);
+        Note C5 = new Note(59,538.584,20,44100,mode);
 
 
         list_note.add(C4);
