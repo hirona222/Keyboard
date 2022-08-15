@@ -58,16 +58,18 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         //音符の作成
         String mode = "Triangle";
         //String mode = "Pulse_20";
-        double a_frq = 440.0;
-        double n = 2.0;
-        Note C4 = new Note(VK_A,a_frq,20,44100,mode);
-        Note D4 = new Note(VK_S,a_frq*n,20,44100,mode);
-        Note E4 = new Note(VK_D,a_frq*n*n,20,44100,mode);
-        Note F4 = new Note(VK_F,a_frq*n*n*n,20,44100,mode);
-        Note G4 = new Note(VK_J,a_frq*n*n*n*n,20,44100,mode);
-        Note A4 = new Note(VK_K,a_frq*n*n*n*n*n,20,44100,mode);
-        Note B4 = new Note(VK_L,a_frq*n*n*n*n*n*n,20,44100,mode);
-        Note C5 = new Note(59,a_frq*n*n*n*n*n*n*n,20,44100,mode);
+        mode = "Sin";
+        double a_frq = 440.0;    //ラ
+        a_frq = 523.251;   //ド
+        double n = 1.05946;
+        Note C4 = new Note(VK_A,a_frq*factorial(2.0,-3),20,44100,mode);
+        Note D4 = new Note(VK_S,a_frq*factorial(2.0,-2),20,44100,mode);
+        Note E4 = new Note(VK_D,a_frq*factorial(2.0,-1),20,44100,mode);
+        Note F4 = new Note(VK_F,a_frq*factorial(2.0,0),20,44100,mode);
+        Note G4 = new Note(VK_J,a_frq*factorial(2.0,1),20,44100,mode);
+        Note A4 = new Note(VK_K,a_frq*factorial(2.0,2),20,44100,mode);
+        Note B4 = new Note(VK_L,a_frq*factorial(2.0,3),20,44100,mode);
+        Note C5 = new Note(59,a_frq*factorial(2.0,4),20,44100,mode);
 
 
         list_note.add(C4);
@@ -108,6 +110,21 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         this.source.start();
 
 
+    }
+
+    public double factorial(double num,int i){
+        double hoge;
+        hoge = 1;
+        if(i<0){
+            for (int j = 0; j < -1*i; j++) {
+                hoge = hoge / num;
+            }
+        }else {
+            for (int j = 0; j < i; j++) {
+                hoge = hoge * num;
+            }
+        }
+        return hoge;
     }
 
     public void send_state(){
