@@ -62,14 +62,14 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         double a_frq = 440.0;    //ラ
         a_frq = 523.251;   //ド
         double n = 1.05946;
-        Note C4 = new Note(VK_A,a_frq*factorial(2.0,-3),20,44100,mode);
-        Note D4 = new Note(VK_S,a_frq*factorial(2.0,-2),20,44100,mode);
-        Note E4 = new Note(VK_D,a_frq*factorial(2.0,-1),20,44100,mode);
-        Note F4 = new Note(VK_F,a_frq*factorial(2.0,0),20,44100,mode);
-        Note G4 = new Note(VK_J,a_frq*factorial(2.0,1),20,44100,mode);
-        Note A4 = new Note(VK_K,a_frq*factorial(2.0,2),20,44100,mode);
-        Note B4 = new Note(VK_L,a_frq*factorial(2.0,3),20,44100,mode);
-        Note C5 = new Note(59,a_frq*factorial(2.0,4),20,44100,mode);
+        Note C4 = new Note(VK_A,a_frq*factorial(3.0,0)/factorial(2.0,0),20,44100,mode);
+        Note D4 = new Note(VK_S,a_frq*factorial(3.0,1)/factorial(2.0,1),20,44100,mode);
+        Note E4 = new Note(VK_D,a_frq*factorial(3.0,2)/factorial(2.0,3),20,44100,mode);
+        Note F4 = new Note(VK_F,a_frq*factorial(3.0,3)/factorial(2.0,4),20,44100,mode);
+        Note G4 = new Note(VK_J,a_frq*factorial(3.0,4)/factorial(2.0,6),20,44100,mode);
+        Note A4 = new Note(VK_K,a_frq*factorial(3.0,5)/factorial(2.0,7),20,44100,mode);
+        Note B4 = new Note(VK_L,a_frq*factorial(3.0,6)/factorial(2.0,9),20,44100,mode);
+        Note C5 = new Note(59,a_frq*factorial(3.0,7)/factorial(2.0,10),20,44100,mode);
 
 
         list_note.add(C4);
