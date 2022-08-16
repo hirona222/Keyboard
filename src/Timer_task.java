@@ -3,7 +3,7 @@ import java.util.TimerTask;
 
 public class Timer_task extends TimerTask {
     Keyboard keyboard;
-    Score score;
+    Piano piano;
     private int num = 0;
     private boolean endFlag = true;
     Timer timer;
@@ -26,8 +26,8 @@ public class Timer_task extends TimerTask {
         if(num % 1000 == 0){
             if(this.mode.equals("Keyboard")) {
                 keyboard.repaint();
-            }else if(this.mode.equals("Score")){
-                score.repaint();
+            }else if(this.mode.equals("Piano")){
+                piano.repaint();
             }
         }
         send_elapsed_time_us();
@@ -39,13 +39,6 @@ public class Timer_task extends TimerTask {
         long elapsed = now_time - this.before_time;
         System.out.print("elapsed [ms] ");
         System.out.println(elapsed);
-        /*
-        System.out.print(" ");
-        System.out.print(now_time);
-        System.out.print(" ");
-        System.out.println(before_time);
-
-         */
         this.before_time = now_time;
     }
 
@@ -54,21 +47,14 @@ public class Timer_task extends TimerTask {
         long elapsed = now_time - this.before_time;
         System.out.print("elapsed [us] ");
         System.out.println((int)(elapsed/1000));
-/*
-        System.out.print(" ");
-        System.out.print(now_time);
-        System.out.print(" ");
-        System.out.println(before_time);
-
- */
         this.before_time = now_time;
     }
 
     public void setKeyboard(Keyboard keyboard){
         this.keyboard = keyboard;
     }
-    public void setScore(Score score){
-        this.score = score;
+    public void setPiano(Piano piano){
+        this.piano = piano;
     }
     public void setTimer(Timer time3){
         this.timer = time3;

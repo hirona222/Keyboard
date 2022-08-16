@@ -19,10 +19,15 @@ public class Note {
         this.angle_frq_discrete = this.angle_frq/this.sample_frq;
         this.mode = mode;
     }
+    private void disp_frq(){
+        System.out.print(String.format("%.1f",this.frq));
+        System.out.print(" ");
+        System.out.println(this.key);
+    }
 
     public double value(){
         //音量を位相に合わせて変更：ADSR設定
-        this.culcu_volume();
+        this.cul_volume();
 
         //現在の位相の値における値の取得
         double value;
@@ -86,12 +91,15 @@ public class Note {
             default:
                 value = this.volume * Math.sin(this.angle_frq_discrete * this.times);
         }
-        return value;
+        if(this.on_flag == true) {
+            return value;
+        }else{
+            return 0;
+        }
     }
-    public void culcu_volume(){
+    public void cul_volume(){
 
     }
-
     public void set_volume(int volume){
         this.volume = volume;
     }
@@ -109,6 +117,7 @@ public class Note {
             this.clear_phase();
         }
         this.on_flag = true;
+        //this.disp_frq();
     }
     public void set_off(){
         this.on_flag = false;
