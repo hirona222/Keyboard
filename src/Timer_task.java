@@ -30,7 +30,7 @@ public class Timer_task extends TimerTask {
                 score.repaint();
             }
         }
-        send_elapsed_time_us();
+        //send_elapsed_time_us();
         //send_elapsed_time();
 
     }

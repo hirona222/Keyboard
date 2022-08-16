@@ -38,8 +38,8 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         int count = 0;
         while(true){
             if(keyboard.buffer_update()){
-                System.out.print(count);
-                System.out.println(" update");
+                //System.out.print(count);
+                //System.out.println(" update");
                 count = 0;
             }else{
                 count++;
@@ -57,17 +57,37 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
 
         //音符の作成
         String mode = "Triangle";
-        double a_frq = 440.0;
-        Note C4 = new Note(VK_A,269.292,20,44100,mode);
-        Note D4 = new Note(VK_S,302.270,20,44100,mode);
-        Note E4 = new Note(VK_D,339.286,20,44100,mode);
-        Note F4 = new Note(VK_F,359.461,20,44100,mode);
-        Note G4 = new Note(VK_J,403.482,20,44100,mode);
-        Note A4 = new Note(VK_K,452.893,20,44100,mode);
-        Note B4 = new Note(VK_L,508.355,20,44100,mode);
-        Note C5 = new Note(59,538.584,20,44100,mode);
+        double a_frq = 440.0;    //ラA4
+        double r = 1.0594630943592953;
 
+        Note C3 = new Note(1000,a_frq*factorial(r,-21),20,44100,mode);
+        Note D3 = new Note(1000,a_frq*factorial(r,-19),20,44100,mode);
+        Note E3 = new Note(1000,a_frq*factorial(r,-17),20,44100,mode);
+        Note F3 = new Note(1000,a_frq*factorial(r,-16),20,44100,mode);
+        Note G3 = new Note(1000,a_frq*factorial(r,-14),20,44100,mode);
+        Note A3 = new Note(1000,a_frq*factorial(r,-12),20,44100,mode);
+        Note B3 = new Note(1000,a_frq*factorial(r,-10),20,44100,mode);
+        Note C4 = new Note(VK_A,a_frq*factorial(r,-9),20,44100,mode);
+        Note C4s = new Note(VK_W,a_frq*factorial(r,-8),20,44100,mode);
+        Note D4 = new Note(VK_S,a_frq*factorial(r,-7),20,44100,mode);
+        Note D4s = new Note(VK_E,a_frq*factorial(r,-6),20,44100,mode);
+        Note E4 = new Note(VK_D,a_frq*factorial(r,-5),20,44100,mode);
+        Note F4 = new Note(VK_F,a_frq*factorial(r,-4),20,44100,mode);
+        Note F4s = new Note(VK_U,a_frq*factorial(r,-3),20,44100,mode);
+        Note G4 = new Note(VK_J,a_frq*factorial(r,-2),20,44100,mode);
+        Note G4s = new Note(VK_I,a_frq*factorial(r,-1),20,44100,mode);
+        Note A4 = new Note(VK_K,a_frq*factorial(r,0),20,44100,mode);
+        Note A4s = new Note(VK_O,a_frq*factorial(r,1),20,44100,mode);
+        Note B4 = new Note(VK_L,a_frq*factorial(r,2),20,44100,mode);
+        Note C5 = new Note(59,a_frq*factorial(r,3),20,44100,mode);
 
+        list_note.add(C3);
+        list_note.add(D3);
+        list_note.add(E3);
+        list_note.add(F3);
+        list_note.add(G3);
+        list_note.add(A3);
+        list_note.add(B3);
         list_note.add(C4);
         list_note.add(D4);
         list_note.add(E4);
@@ -76,6 +96,13 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
         list_note.add(A4);
         list_note.add(B4);
         list_note.add(C5);
+
+        list_note.add(C4s);
+        list_note.add(D4s);
+        list_note.add(F4s);
+        list_note.add(G4s);
+        list_note.add(A4s);
+
 
         C4.set_volume(20);
 
@@ -107,7 +134,20 @@ public class Keyboard extends JFrame implements LineListener ,KeyListener {
 
 
     }
-
+    public double factorial(double num,int i){
+        double hoge;
+        hoge = 1;
+        if(i<0){
+            for (int j = 0; j < -1*i; j++) {
+                hoge = hoge / num;
+            }
+        }else {
+            for (int j = 0; j < i; j++) {
+                hoge = hoge * num;
+            }
+        }
+        return hoge;
+    }
     public void send_state(){
         System.out.print("active ");
         System.out.print(this.source.isActive());
