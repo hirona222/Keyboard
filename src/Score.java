@@ -48,11 +48,12 @@ public class Score{
         Code code_Bm7 = new Code(new Note[] {C4,D4,E4});
         Code code_E7 = new Code(new Note[] {C4,D4,E4});
         Code code_null = new Code(new Note[] {note_null});
-
+        Code code_A7 = new Code(new Note[] {F3,B3,D3});
 
 
         //楽譜:Scoreの作成
-        this.score = new Code[]{code_C,code_Am,code_Dm,code_G,code_null};
+        this.score = new Code[]{code_C,code_Am,code_Dm,code_G,code_null,
+                code_C,code_A7,code_Dm,code_G,code_null};
         this.volume = 0.7;
         this.frame_ms = 1000;
         this.play_note_before = this.score.length - 1;
