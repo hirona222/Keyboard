@@ -19,12 +19,236 @@ public class Note {
         this.angle_frq_discrete = this.angle_frq/this.sample_frq;
         this.mode = mode;
     }
+    public Note(String name){
+        this.key = 1000;
+        this.volume = 20;
+        this.sample_frq = 44100;
+
+        double a_frq = 440.0;    //ラA4
+        double r = 1.0594630943592953;
+
+        switch (name){
+            //------------3---------------
+            case "C3":
+                this.frq = a_frq*factorial(r,-21);
+                break;
+            case "D3b":
+                this.frq = a_frq*factorial(r,-20);
+                break;
+            case "D3":
+                this.frq = a_frq*factorial(r,-19);
+                break;
+            case "E3b":
+                this.frq = a_frq*factorial(r,-18);
+                break;
+            case "E3":
+                this.frq = a_frq*factorial(r,-17);
+                break;
+            case "F3":
+                this.frq = a_frq*factorial(r,-16);
+                break;
+            case "G3b":
+                this.frq = a_frq*factorial(r,-15);
+                break;
+            case "G3":
+                this.frq = a_frq*factorial(r,-14);
+                break;
+            case "A3b":
+                this.frq = a_frq*factorial(r,-13);
+                break;
+            case "A3":
+                this.frq = a_frq*factorial(r,-12);
+                break;
+            case "B3b":
+                this.frq = a_frq*factorial(r,-11);
+                break;
+            case "B3":
+                this.frq = a_frq*factorial(r,-10);
+                break;
+
+                //----------4------------------
+            case "C4":
+                this.frq = a_frq*factorial(r,-9);
+                break;
+            case "D4b":
+                this.frq = a_frq*factorial(r,-8);
+                break;
+            case "D4":
+                this.frq = a_frq*factorial(r,-7);
+                break;
+            case "E4b":
+                this.frq = a_frq*factorial(r,-6);
+                break;
+            case "E4":
+                this.frq = a_frq*factorial(r,-5);
+                break;
+            case "F4":
+                this.frq = a_frq*factorial(r,-4);
+                break;
+            case "G4b":
+                this.frq = a_frq*factorial(r,-3);
+                break;
+            case "G4":
+                this.frq = a_frq*factorial(r,-2);
+                break;
+            case "A4b":
+                this.frq = a_frq*factorial(r,-1);
+                break;
+            case "A4":
+                this.frq = a_frq*factorial(r,0);
+                break;
+            case "B4b":
+                this.frq = a_frq*factorial(r,1);
+                break;
+            case "B4":
+                this.frq = a_frq*factorial(r,2);
+                break;
+
+                //----------------5-------------
+            case "C5":
+                this.frq = a_frq*factorial(r,3);
+                break;
+            case "D5b":
+                this.frq = a_frq*factorial(r,4);
+                break;
+            case "D5":
+                this.frq = a_frq*factorial(r,5);
+                break;
+            case "E5b":
+                this.frq = a_frq*factorial(r,6);
+                break;
+            case "E5":
+                this.frq = a_frq*factorial(r,7);
+                break;
+            case "F5":
+                this.frq = a_frq*factorial(r,8);
+                break;
+            case "G5b":
+                this.frq = a_frq*factorial(r,9);
+                break;
+            case "G5":
+                this.frq = a_frq*factorial(r,10);
+                break;
+            case "A5b":
+                this.frq = a_frq*factorial(r,11);
+                break;
+            case "A5":
+                this.frq = a_frq*factorial(r,12);
+                break;
+            case "B5b":
+                this.frq = a_frq*factorial(r,13);
+                break;
+            case "B5":
+                this.frq = a_frq*factorial(r,14);
+                break;
+
+
+                //-----------------6---------------------
+            case "C6":
+                this.frq = a_frq*factorial(r,15);
+                break;
+            case "D6b":
+                this.frq = a_frq*factorial(r,16);
+                break;
+            case "D6":
+                this.frq = a_frq*factorial(r,17);
+                break;
+            case "E6b":
+                this.frq = a_frq*factorial(r,18);
+                break;
+            case "E6":
+                this.frq = a_frq*factorial(r,19);
+                break;
+            case "F6":
+                this.frq = a_frq*factorial(r,20);
+                break;
+            case "G6b":
+                this.frq = a_frq*factorial(r,21);
+                break;
+            case "G6":
+                this.frq = a_frq*factorial(r,22);
+                break;
+            case "A6b":
+                this.frq = a_frq*factorial(r,23);
+                break;
+            case "A6":
+                this.frq = a_frq*factorial(r,24);
+                break;
+            case "B6b":
+                this.frq = a_frq*factorial(r,25);
+                break;
+            case "B6":
+                this.frq = a_frq*factorial(r,26);
+                break;
+
+                //-----------------------7-------------------
+            case "C7":
+                this.frq = a_frq*factorial(r,27);
+                break;
+            case "D7b":
+                this.frq = a_frq*factorial(r,28);
+                break;
+            case "D7":
+                this.frq = a_frq*factorial(r,29);
+                break;
+            case "E7b":
+                this.frq = a_frq*factorial(r,30);
+                break;
+            case "E7":
+                this.frq = a_frq*factorial(r,31);
+                break;
+            case "F7":
+                this.frq = a_frq*factorial(r,32);
+                break;
+            case "G7b":
+                this.frq = a_frq*factorial(r,33);
+                break;
+            case "G7":
+                this.frq = a_frq*factorial(r,34);
+                break;
+            case "A7b":
+                this.frq = a_frq*factorial(r,35);
+                break;
+            case "A7":
+                this.frq = a_frq*factorial(r,36);
+                break;
+            case "B7b":
+                this.frq = a_frq*factorial(r,37);
+                break;
+            case "B7":
+                this.frq = a_frq*factorial(r,38);
+                break;
+            case "C8":
+                this.frq = a_frq*factorial(r,39);
+                break;
+
+            default:
+                this.frq = 10;
+        }
+        this.angle_frq = this.frq * 2 * Math.PI;
+        this.angle_frq_discrete = this.angle_frq/this.sample_frq;
+        this.mode = "Triangle";
+    }
+
     private void disp_frq(){
         System.out.print(String.format("%.1f",this.frq));
         System.out.print(" ");
         System.out.println(this.key);
     }
-
+    public double factorial(double num,int i){
+        double hoge;
+        hoge = 1;
+        if(i<0){
+            for (int j = 0; j < -1*i; j++) {
+                hoge = hoge / num;
+            }
+        }else {
+            for (int j = 0; j < i; j++) {
+                hoge = hoge * num;
+            }
+        }
+        return hoge;
+    }
     public double value(){
         //音量を位相に合わせて変更：ADSR設定
         this.cul_volume();
@@ -117,7 +341,7 @@ public class Note {
             this.clear_phase();
         }
         this.on_flag = true;
-        //this.disp_frq();
+        this.disp_frq();
     }
     public void set_off(){
         this.on_flag = false;

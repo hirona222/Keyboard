@@ -41,8 +41,8 @@ public class Piano extends JFrame implements LineListener , KeyListener {
         int count = 0;
         while(true){
             if(piano.buffer_update()){
-                System.out.print(count);
-                System.out.println(" update");
+                //System.out.print(count);
+                //System.out.println(" update");
                 count = 0;
             }else{
                 count++;
@@ -59,7 +59,7 @@ public class Piano extends JFrame implements LineListener , KeyListener {
         addKeyListener(this);
 
         //音符の作成
-        this.mode = "Sin";
+        this.mode = "Triangle";
         double a_frq = 440.0;    //ラA4
         double r = 1.0594630943592953;
 
