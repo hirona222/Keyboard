@@ -1,5 +1,3 @@
-import static java.awt.event.KeyEvent.*;
-
 public class Score{
     private String mode;
     private long start_frame;
@@ -18,29 +16,32 @@ public class Score{
 
         Note note_null = new Note(1000,0,0,44100,mode);
 
-        //コード:Codeの作成
-        Code code_C = new Code(new Note[] {
-                new Note("C4"),
-                new Note(""),G3});
-        Code code_Dm = new Code(new Note[] {D3,F3,A4});
-        Code code_Em = new Code(new Note[] {E3,G3,B4});
-        Code code_F = new Code(new Note[] {F3,A4,C4});
-        Code code_G = new Code(new Note[] {G3,B4,D4});
-        Code code_Am = new Code(new Note[] {A4,C4,E4});
-        Code code_Bm5 = new Code(new Note[] {B4,D4,F4});
-
-
-        Code code_Dm7 = new Code(new Note[] {C4,D4,E4});
-        Code code_G7 = new Code(new Note[] {C4,D4,E4});
-        Code code_Bm7 = new Code(new Note[] {C4,D4,E4});
-        Code code_E7 = new Code(new Note[] {C4,D4,E4});
-
-        Code code_null = new Code(new Note[] {note_null});
-        Code code_A7 = new Code(new Note[] {F3,B3,D3});
-
-
         //楽譜:Scoreの作成
-        this.score = new Code[]{code_C,code_Am,code_F,code_G,code_null,code_null};
+        this.score = new Code[]{
+                /*
+                new Code("C4_C3"),
+                new Code("F4_F3"),
+                new Code("G4_G3"),
+                new Code("C4"),
+                new Code(""),
+                new Code(""),
+                new Code("F4_F3"),
+                new Code("G4_G3"),
+                new Code("Em4_E3"),
+                new Code("Am4_A3"),
+                new Code(""),
+                new Code(""),
+*/
+                new Code("Em4"),
+                new Code("Bm4"),
+                new Code("C4"),
+                new Code("G4"),
+                new Code("Am4"),
+                new Code("Em4"),
+                new Code("A7"),
+                new Code("B7"),
+                new Code("")
+                };
         this.volume = 0.7;
         this.frame_ms = 1000;
         this.play_note_before = this.score.length - 1;

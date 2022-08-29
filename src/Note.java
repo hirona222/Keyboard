@@ -222,6 +222,10 @@ public class Note {
                 this.frq = a_frq*factorial(r,39);
                 break;
 
+            case "null":
+                this.frq = 0;
+                break;
+
             default:
                 this.frq = 10;
         }

@@ -263,11 +263,112 @@ public class Code{
                 };
                 break;
 
-            default:
+            //長調4_転回　　エクセルで音符の組み合わせを記述して読み出そう
+            case "C4onE4":
                 this.code_list = new Note[]{
-                        new Note("C4"),
+                        new Note("C5"),
                         new Note("E4"),
                         new Note("G4")
+                };
+                break;
+            case "C4onG4":
+                this.code_list = new Note[]{
+                        new Note("C5"),
+                        new Note("E5"),
+                        new Note("G4")
+                };
+                break;
+
+            case "Dm4onF4":
+                this.code_list = new Note[]{
+                        new Note("D5"),
+                        new Note("F4"),
+                        new Note("A4")
+                };
+                break;
+            case "Dm4onA4":
+                this.code_list = new Note[]{
+                        new Note("D5"),
+                        new Note("F5"),
+                        new Note("A4")
+                };
+                break;
+            case "Em4onG4":
+                this.code_list = new Note[]{
+                        new Note("E5"),
+                        new Note("G4"),
+                        new Note("B4")
+                };
+                break;
+            case "Em4onB4":
+                this.code_list = new Note[]{
+                        new Note("E5"),
+                        new Note("G5"),
+                        new Note("B4")
+                };
+                break;
+            case "F4onA4":
+                this.code_list = new Note[]{
+                        new Note("F5"),
+                        new Note("A4"),
+                        new Note("C5")
+                };
+                break;
+            case "F4onC5":
+                this.code_list = new Note[]{
+                        new Note("F5"),
+                        new Note("A5"),
+                        new Note("C5")
+                };
+                break;
+            case "G4onB4":
+                this.code_list = new Note[]{
+                        new Note("G5"),
+                        new Note("B4"),
+                        new Note("D5")
+                };
+                break;
+            case "G4onD5":
+                this.code_list = new Note[]{
+                        new Note("G5"),
+                        new Note("B5"),
+                        new Note("D5")
+                };
+                break;
+            case "Am4onC5":
+                this.code_list = new Note[]{
+                        new Note("A5"),
+                        new Note("C5"),
+                        new Note("E5")
+                };
+                break;
+            case "Am4onE5":
+                this.code_list = new Note[]{
+                        new Note("A5"),
+                        new Note("C6"),
+                        new Note("E5")
+                };
+                break;
+            case "Bm4onD5":
+                this.code_list = new Note[]{
+                        new Note("B5"),
+                        new Note("D5"),
+                        new Note("F5")
+                };
+                break;
+            case "Bm4onF5":
+                this.code_list = new Note[]{
+                        new Note("B5"),
+                        new Note("D6"),
+                        new Note("F5")
+                };
+                break;
+
+
+
+            default:
+                this.code_list = new Note[]{
+                        new Note("null")
                 };
                 break;
         }
